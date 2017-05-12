@@ -1,1 +1,3 @@
-#bot auto message discord
+## Lachen App Web API
+
+coming soon...
