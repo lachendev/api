@@ -13,6 +13,7 @@ exports.create = function (req, res, next) {
             var postDetail = new PostDetail({
                 "sequence": req.body.postdetail.sequence,
                 "content": req.body.postdetail.content,
+                "tag": req.body.postdetail.tag,
                 "postId": post._id
             });
 

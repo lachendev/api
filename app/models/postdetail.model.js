@@ -11,6 +11,10 @@ var PostDetailSchema = new Schema({
         type: String,
         required: true
     },
+    tag: {
+        type: [String],
+        required: true
+    },
     postId: {
         type: Schema.ObjectId,
         ref: 'Post'

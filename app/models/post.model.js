@@ -3,6 +3,10 @@ var User = mongoose.model('User');
 var Schema = mongoose.Schema;
 
 var PostSchema = new Schema({
+    header: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true
