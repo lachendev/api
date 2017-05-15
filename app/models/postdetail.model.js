@@ -11,9 +11,17 @@ var PostDetailSchema = new Schema({
         type: String,
         required: true
     },
-    tag: {
-        type: [String],
-        required: true
+    angularjs: {
+        type: Boolean,
+        default: false
+    },
+    html5: {
+        type: Boolean,
+        default: false
+    },
+    css: {
+        type: Boolean,
+        default: false
     },
     postId: {
         type: Schema.ObjectId,

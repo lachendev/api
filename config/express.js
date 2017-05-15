@@ -7,10 +7,17 @@ var sass = require('node-sass-middleware');
 var validator = require('express-validator');
 var session = require('express-session');
 var passport = require('passport');
-
+var cors = require('cors');
 
 module.exports = function () {
     var app = express();
+    const corsPolicy = {
+        origin: '*',
+        methods: 'GET,PUT,POST,DELETE,OPTIONS',
+        allowedHeaders: 'Access-Control-Allow-Headers, Origin, X-Requested-With, Content-Type, Accept, X-Language, X-Session, x-userTokenId, x-accessId, Pragma, Cache-Control, If-Modified-Since'
+    }
+    app.use(cors(corsPolicy));
+
     if (process.env.NODE_ENV === 'development') {
         app.use(morgan('dev'));
     } else {
